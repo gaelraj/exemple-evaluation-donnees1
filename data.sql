@@ -19,7 +19,7 @@ create table leave (
     id SERIAL PRIMARY KEY,
     start_date DATE,
     end_date DATE,
-    employee_id INT NULL,
+    employee_id INT NOT NULL,
     CONSTRAINT fk_leave_employee 
         FOREIGN KEY (employee_id)
         REFERENCES employee(id)
